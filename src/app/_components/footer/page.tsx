@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='row1'>
+        <div className='row1' >
           <div className='row'>
             <p className='row2-p title'>Product</p>
             <p className='row2-p'>Landingpage</p>
