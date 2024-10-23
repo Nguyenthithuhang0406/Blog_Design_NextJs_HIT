@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable */
 import React from 'react'
 
@@ -7,7 +8,15 @@ import { SlArrowDown } from "react-icons/sl";
 import { SlMenu } from "react-icons/sl";
 
 import "./Header.scss";
+import { useRouter } from 'next/navigation';
 const Header = () => {
+
+  const router = useRouter();
+
+  const handleClickSignIn = () => {
+    router.push('/register');
+  };
+
   return (
     <div className='header-container'>
       <div className='logo-header'>
@@ -31,7 +40,7 @@ const Header = () => {
           <p className='p-item'>Faq</p>
         </div>
         <div className='menuItem-btn'>
-          <button>Sign in</button>
+          <button onClick={handleClickSignIn}>Sign in</button>
         </div>
       </div>
       <div className='menuHeader2'>
@@ -54,7 +63,7 @@ const Header = () => {
             <p className='p-item'>Faq</p>
           </div>
           <div className='menuItem-btn2'>
-            <button>Sign in</button>
+            <button onClick={handleClickSignIn}>Sign in</button>
           </div>
         </div>
       </div>
